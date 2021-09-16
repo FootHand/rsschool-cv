@@ -1,1 +1,0 @@
-https://github.com/FootHand/rsschool-cv/cv
