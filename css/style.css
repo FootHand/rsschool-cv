@@ -9,6 +9,7 @@ body {
     max-width: 1200px;
     background-color: rgb(250, 245, 245);
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 10px 15px 10px rgb(147, 180, 201);
 }
 
 .header {
@@ -91,10 +92,12 @@ a:hover {
     display: block;
     max-width: 100%;
     height: auto;
+    box-shadow: 2px 10px 15px 10px rgb(93, 128, 151);
 }
 
 h1 {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .container-right {
@@ -111,6 +114,11 @@ h1 {
     list-style-type: circle;
 }
 
+.github {
+    width: 50px;
+    height: 50px;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -118,11 +126,6 @@ footer {
     height: 60px;
     font-size: 20px;
     background-color: rgb(163, 163, 214);
-}
-
-.github {
-    width: 50px;
-    height: 50px;
 }
 
 .rsschool {
