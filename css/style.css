@@ -111,6 +111,11 @@ h1 {
     list-style-type: circle;
 }
 
+.github {
+    width: 50px;
+    height: 50px;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -118,11 +123,6 @@ footer {
     height: 60px;
     font-size: 20px;
     background-color: rgb(163, 163, 214);
-}
-
-.github {
-    width: 50px;
-    height: 50px;
 }
 
 .rsschool {
