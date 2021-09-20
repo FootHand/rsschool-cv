@@ -1,0 +1,242 @@
+* {
+   margin: 0 auto;
+   padding: 0;
+   box-sizing: border-box ;
+}
+
+body {
+    max-width: 1200px;
+    background-color: rgb(250, 245, 245);
+    font-family: 'Montserrat', sans-serif;    
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(161, 180, 214);
+}
+
+.header-logo {
+    align-self: center;
+}
+
+.header-logo img {
+    width: 100px;
+    height: 50px;
+}
+
+#menu-toggle,
+.menu-btn {
+    display: none;
+}
+
+.menu-box {
+    display: flex;
+    height: 60px;
+}
+
+.menu-box li {
+    align-self: center;
+    white-space: nowrap;
+    margin: 0 15px 0 0;
+    padding: 5px;
+}
+
+.menu-box li:hover {
+    color: #ffe;
+    background-color: #95a1aa;
+    transition: .3s;
+}
+
+.container-main {
+    display: flex;
+    width: 100%;
+}
+
+.container-left {
+    width: 30%;
+    padding: 0 60px;
+    background-color: rgb(216, 219, 219);
+}
+
+section {
+    margin: 50px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.my-photo-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.photo {
+    margin-bottom: 20px;    
+}
+
+.container-right {
+    width: 70%;
+    padding: 0 40px 0 50px;
+    background-color: rgb(242, 244, 247);
+}
+
+.about-me-text p {
+    margin-bottom: 7px;
+}
+
+.personality ul li {
+    list-style-type: circle;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    background-color: rgb(163, 163, 214);
+}
+
+.github {
+    width: 50px;
+    height: 50px;
+}
+
+.rsschool {
+    width: 100px;
+    height: 50px;
+}
+
+@media(max-width:767px) {
+
+    .header,
+    .container-left,
+    .container-right {
+        background-color: rgb(242, 244, 247);
+    }
+
+    .header-logo{
+        display: none;
+    }
+
+    #menu-toggle {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu-toggle:checked ~ .menu-btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu-toggle:checked ~ .menu-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    #menu-toggle:checked ~ .menu-box {
+        left: 0;
+        visibility: visible;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu-button > span,
+    .menu-button > span::before,
+    .menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(90, 88, 88);
+        transition-duration: .25s;
+    }
+
+    .menu-button > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .menu-button > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu-box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 160px;
+        height: 100%;
+        margin: 0;
+        padding: 60px 0;
+        background-color: rgb(202, 205, 209);
+        transition-duration: .25s;
+        overflow-y: auto;
+    }
+
+    .menu-box li {
+        padding: 0;
+    }
+
+    .menu-item {
+        display: block;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: .25s;
+    }
+
+    .menu-item:hover {
+        background-color: rgb(161, 180, 214);
+    }
+
+    .container-main {
+        flex-direction: column;
+    }
+
+    .container-left,
+    .container-right {
+        width: 100%;
+        padding: 0 70px;
+    }
+
+}
